@@ -1,6 +1,9 @@
+import { Container } from "./styles"
 export function Sidebar() {
   return (
-    <h1>Sidebar</h1>
+    <Container>
+      <h1>Sidebar</h1>
+    </Container>
   )
 }
 
