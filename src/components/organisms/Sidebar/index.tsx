@@ -17,7 +17,6 @@ import ListItem from '../../molecules/ListItem/ListItem';
 export function Sidebar() {
   return (
     <Container>
-      <h1>Sidebar</h1>
       <Button>
         <CategoryIcon icon={menuImg} alt="Abrir e fechar o menu" />
       </Button>
