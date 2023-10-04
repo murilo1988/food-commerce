@@ -2,30 +2,38 @@
 import { Container } from './styles'
 
 // assets
-import menuImg from '../../../assets/menu.svg'
-import burgerIcon from '../../../assets/burger.svg'
-import drinkIcon from '../../../assets/soda.svg'
-import pizzaIcon from '../../..//assets/pizza.svg'
-import iceCreamIcon from '../../../assets/ice-cream.svg'
+import { ReactComponent as MenuImg } from '../../../assets/menu.svg'
+import { ReactComponent as BurgerIcon } from '../../../assets/burger.svg'
+import { ReactComponent as DrinkIcon } from '../../../assets/soda.svg'
+import { ReactComponent as PizzaIcon } from '../../..//assets/pizza.svg'
+import { ReactComponent as IceCreamIcon } from '../../../assets/ice-cream.svg'
 
 // componets
 import Button from '../../atoms/Button/Button'
-import CategoryIcon from './../../atoms/Icon/CategoryIcon';
-import ListItem from '../../molecules/ListItem/ListItem';
-
+import ListItem from '../../molecules/lListItem/ListItem'
 
 export function Sidebar() {
   return (
     <Container>
       <Button>
-        <CategoryIcon icon={menuImg} alt="Abrir e fechar o menu" />
+        <MenuImg />
       </Button>
       <nav>
         <ul>
-          <ListItem icon={burgerIcon} text='Hamburgueres' link='#' />
-          <ListItem icon={pizzaIcon} text='Pizzas' link='#' />
-          <ListItem icon={drinkIcon} text='Drinks' link='#' />
-          <ListItem icon={iceCreamIcon} text='Ice-Cream' link='#' />
+          <ListItem className='active' text='Hamburgueres' link='#'>
+            {<BurgerIcon />}
+          </ListItem>
+          <ListItem text='Pizzas' link='#'>
+            {<PizzaIcon />}
+          </ListItem>
+          <ListItem text='Drinks' link='#'>
+            {<DrinkIcon />}
+          </ListItem>
+          <ListItem text='IceCream' link='#'>
+            {<IceCreamIcon />}
+          </ListItem>
+
+
         </ul>
       </nav>
     </Container >
